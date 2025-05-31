@@ -1,0 +1,4 @@
+python-dotenv
+mysql-connector-python
+psutil
+wmi; platform_system == "Windows"
