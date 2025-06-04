@@ -3,19 +3,17 @@ import socket
 import platform
 import subprocess
 import re
-from dotenv import load_dotenv
+
 import os
 import sys
 import mysql.connector
 
-# Load environment variables from .env file
-load_dotenv()
 
-# Database config (store securely in production!)
-DB_HOST = os.getenv("DB_HOST", "localhost")
-DB_USER = os.getenv("DB_USER", "")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "")
-DB_NAME = os.getenv("DB_NAME", "")
+DB_HOST="68.178.156.243"
+DB_USER="itamcloud"
+DB_PASSWORD="Kgl0b@ltech"
+DB_NAME="ITAMCloud"
+
 
 class NetworkAdapterInfoCollector:
     def __init__(self, company_id, asset_id):

@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import os
 import sys
 import mysql.connector
@@ -13,14 +12,12 @@ from src.lib.graphics_card_info_collector import GraphicsCardInfoCollector
 from src.lib.memory_info_collector import MemHardwareInfoCollector
 from src.lib.network_adapter_info_collector import NetworkAdapterInfoCollector
 
-# Load environment variables from .env file
-load_dotenv()
 
 # Database config (store securely in production!)
-DB_HOST = os.getenv("DB_HOST", "localhost")
-DB_USER = os.getenv("DB_USER", "")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "")
-DB_NAME = os.getenv("DB_NAME", "")
+DB_HOST="68.178.156.243"
+DB_USER="itamcloud"
+DB_PASSWORD="Kgl0b@ltech"
+DB_NAME="ITAMCloud"
 
 
 def check_serial_no(serial_number):
