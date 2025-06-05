@@ -30,7 +30,8 @@ def check_serial_no(serial_number):
             password=DB_PASSWORD,
             database=DB_NAME
         )
-        cursor = connection.cursor()
+        cursor = connection.cursor(buffered=True)  # Use buffered cursor
+
 
         # Get asset id and company_id from assets table using the given serial_number
         asset_id_query = "SELECT id, company_id FROM assets WHERE serial = %s"
@@ -39,8 +40,10 @@ def check_serial_no(serial_number):
         if not asset_row:
             print(f"❌ No asset found for serial_number: {serial_number}")
             return None
+        print(f"✅ Asset found for serial_number: {serial_number}")
+        print(f"Asset row: {asset_row}")
+        # Unpack the asset_id and company_id from the fetched row   
         asset_id, company_id = asset_row
-        connection.commit()
         print(f"✅ Found asset_id: {asset_id}, company_id: {company_id} for serial_number: {serial_number}")
         # Store both in a tuple (or dict as needed) and return
         asset_info = (asset_id, company_id)
