@@ -6,7 +6,7 @@ python3 -V
 ```
 ## upadate the pip
 ```
-pip install --upgrade pip
+pip3 install --upgrade pip
 ```
 ## Create a virtual environment
 ```
