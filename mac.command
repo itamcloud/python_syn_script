@@ -49,5 +49,7 @@ source myenv/bin/activate
 # Install packages
 pip install -r requirements.txt
 
+echo "Current directory: $(pwd)"
+
 # Run the app
 python -m src.main
