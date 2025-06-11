@@ -4,7 +4,7 @@
 ```
 python3 -V
 ```
-## install the venv only in Linux, for windows and mac skip this step
+## upadate the pip
 ```
 pip install --upgrade pip
 ```
