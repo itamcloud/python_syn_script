@@ -2,6 +2,9 @@
 # install the python on the system 3.12
 # change the directory to src
 ```
+chmod +x mac.command
+```
+```
 python3 -V
 ```
 ## upadate the pip
