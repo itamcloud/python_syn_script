@@ -29,8 +29,11 @@ else
   echo "Python3 is already installed."
 fi
 
-# Change to project directory
-# cd "$(dirname "$0")/src"
+cd "$(dirname "$0")"
+
+# Show current path
+echo "Current directory: $(pwd)"
+
 
 # Check Python version
 python3 -V
