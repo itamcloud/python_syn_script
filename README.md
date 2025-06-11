@@ -6,7 +6,7 @@ python3 -V
 ```
 ## install the venv only in Linux, for windows and mac skip this step
 ```
-sudo apt install python3-venv
+pip install --upgrade pip
 ```
 ## Create a virtual environment
 ```
